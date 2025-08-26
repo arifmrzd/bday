@@ -102,6 +102,10 @@
       color: pink;
     }
 
+    .yellow-star {
+      color: yellow;
+    }
+
     @keyframes fall {
       to {
         transform: translateY(120vh) rotate(360deg);
@@ -200,8 +204,8 @@ i love you, sayangggg.
         const el = document.createElement('div');
         el.classList.add('falling');
         const isHeart = Math.random() < 0.5;
-        el.innerText = isHeart ? '🩷' ;
-        el.classList.add(isHeart ? 'pink-heart');
+        el.innerText = isHeart ? '🩷' : '⭐';
+        el.classList.add(isHeart ? 'pink-heart' : 'yellow-star');
         el.style.left = Math.random() * 100 + 'vw';
         el.style.animationDuration = (3 + Math.random() * 2) + 's';
         document.body.appendChild(el);
@@ -211,6 +215,7 @@ i love you, sayangggg.
   </script>
 </body>
 </html>
+
 
 
 
